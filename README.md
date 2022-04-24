@@ -10,7 +10,7 @@ dotnet watch run
 ```
 
 
-- [ ] #1
+- [ ] Add all crud operations. #1
  
 
 ## Query 
