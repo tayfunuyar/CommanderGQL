@@ -12,18 +12,19 @@ namespace CommanderGQL.GraphQL.Commands
         {
             descriptor.Description("Represents any executable command");
 
-            descriptor.Field(c => c.Platform)
-            .ResolveWith<Resolvers>(c => c.GetPlatform(default!, default!))
-            .UseDbContext<AppDbContext>()
-            .Description("This is the platform to which to command belongs");
+             descriptor
+                .Field(c => c.Platform)
+                .ResolveWith<Resolvers>(c => c.GetPlatform(default!, default!))
+                .UseDbContext<AppDbContext>()
+                .Description("This is the platform to which the command belongs.");
         }
 
 
         private class Resolvers
         {
-            public Platform GetPlatform(Command command, [ScopedService] AppDbContext context)
+            public Platform GetPlatform([Parent]Command command, [ScopedService] AppDbContext context)
             {
-                return context.Platforms.FirstOrDefault(x => x.Id == command.PlatformId);
+                return context.Platforms.FirstOrDefault(p => p.Id == command.PlatformId);
             }
         }
     }
