@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\tyfnu\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\tyfnu\\.nuget\\packages"
+    ]
+  }
+}
