@@ -16,6 +16,10 @@ namespace CommanderGQL.GraphQL.Platforms
                 p => p.LicenceKey
             ).Ignore();
 
+
+            descriptor.Field(x=>x.Name)
+            .Description("Platform name add to system.");
+
             descriptor.Field(p=> p.Commands)
             .ResolveWith<Resolvers>(p=> p.GetCommands(default!,default!))
             .UseDbContext<AppDbContext>()
