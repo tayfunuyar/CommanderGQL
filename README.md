@@ -22,7 +22,7 @@ dotnet watch run
 ## Subscription 
 ![image](https://user-images.githubusercontent.com/27923376/164972668-c0596982-733d-4ab1-ad59-abbc5ad800a9.png)
 
-## GrapQL Voyager 
+## GraphQL Voyager 
 http://localhost:5000/graphql-voyager
 ![image](https://user-images.githubusercontent.com/27923376/164972743-c9f950b4-96c8-44b3-9055-73ec24a9240b.png)
 ![image](https://user-images.githubusercontent.com/27923376/164972723-2f798615-2d90-4f70-b0dc-bfd6b0d44bab.png)
